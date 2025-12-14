@@ -199,24 +199,24 @@ export default function Index() {
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               Тарифы
             </h2>
-            <p className="text-xl text-slate-300">Система лояльности КЕШБЭК: чем дольше работаем, тем больше бонусов</p>
+            <p className="text-xl text-slate-300">Система лояльности: чем дольше работаем, тем больше скидка</p>
           </div>
 
           <div className="grid md:grid-cols-3 gap-8">
             {[
               {
                 period: "3 месяца",
-                cashback: "5%",
+                discount: "10%",
                 popular: false
               },
               {
                 period: "6 месяцев",
-                cashback: "10%",
+                discount: "15%",
                 popular: true
               },
               {
                 period: "12 месяцев",
-                cashback: "20%",
+                discount: "25%",
                 popular: false
               }
             ].map((plan, i) => (
@@ -237,9 +237,9 @@ export default function Index() {
                   <h3 className="text-3xl font-bold text-white">{plan.period}</h3>
                   <div className="py-8">
                     <div className="text-6xl font-black bg-gradient-to-r from-purple-400 to-orange-400 bg-clip-text text-transparent">
-                      {plan.cashback}
+                      {plan.discount}
                     </div>
-                    <div className="text-slate-400 mt-2">кешбэк</div>
+                    <div className="text-slate-400 mt-2">скидка</div>
                   </div>
                   <Button 
                     className={`w-full ${
@@ -249,7 +249,7 @@ export default function Index() {
                     } text-white`}
                     size="lg"
                   >
-                    Выбрать план
+                    Получить бонусы
                   </Button>
                 </div>
               </Card>
