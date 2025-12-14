@@ -248,9 +248,7 @@ export default function Index() {
                         : 'bg-slate-700 hover:bg-slate-600'
                     } text-white`}
                     size="lg"
-                  >
-                    Получить бонусы
-                  </Button>
+                  >Получить план</Button>
                 </div>
               </Card>
             ))}
