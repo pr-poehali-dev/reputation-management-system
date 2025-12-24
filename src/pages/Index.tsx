@@ -82,8 +82,7 @@ export default function Index() {
                   <h3 className="text-2xl font-bold text-white mb-4">{item.title}</h3>
                   <p className="text-slate-300 text-lg leading-relaxed">{item.description}</p>
                 </Card>
-              );
-            })}
+            ))}
           </div>
         </div>
       </section>
