@@ -5,8 +5,24 @@ import Icon from "@/components/ui/icon";
 export default function Index() {
   return (
     <div className="min-h-screen bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950">
+      {/* Header with Logo */}
+      <header className="fixed top-0 left-0 right-0 z-50 bg-slate-950/80 backdrop-blur-md border-b border-purple-500/20">
+        <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+          <div className="flex items-center gap-3">
+            <img 
+              src="https://cdn.poehali.dev/projects/457e2a63-a35d-4d95-b05a-c6457cef758e/files/9f331395-ab44-438a-81b6-9cf302ce70e3.jpg"
+              alt="ГурИнфо"
+              className="w-12 h-12 object-contain"
+            />
+            <span className="text-2xl font-bold text-white">ГурИнфо</span>
+          </div>
+          <Button className="bg-gradient-to-r from-purple-600 to-orange-500 hover:from-purple-700 hover:to-orange-600 text-white">
+            Связаться
+          </Button>
+        </div>
+      </header>
       {/* Hero Section */}
-      <section className="relative overflow-hidden pt-20 pb-32 px-6">
+      <section className="relative overflow-hidden pt-32 pb-32 px-6">
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-purple-900/20 via-transparent to-transparent"></div>
         <div className="max-w-7xl mx-auto relative z-10">
           <div className="text-center space-y-8 animate-fade-in">
@@ -18,9 +34,9 @@ export default function Index() {
             </h1>
             <div className="flex justify-center mb-6">
               <img 
-                src="https://cdn.poehali.dev/projects/457e2a63-a35d-4d95-b05a-c6457cef758e/files/8c6f2de3-5e6c-4390-8c68-ee820067b91a.jpg"
+                src="https://cdn.poehali.dev/projects/457e2a63-a35d-4d95-b05a-c6457cef758e/files/2b6f9b8b-7557-482f-838f-5a0741f2b521.jpg"
                 alt="Профессиональный подход"
-                className="w-40 h-40 object-contain"
+                className="w-40 h-40 object-contain drop-shadow-2xl"
               />
             </div>
             <p className="text-xl md:text-2xl text-slate-300 max-w-4xl mx-auto leading-relaxed">
@@ -69,9 +85,9 @@ export default function Index() {
               }
             ].map((item, i) => {
               const problemCharacters = [
-                "https://cdn.poehali.dev/projects/457e2a63-a35d-4d95-b05a-c6457cef758e/files/aa72c1a8-eafb-4efa-b829-8387cdff5ca3.jpg",
-                "https://cdn.poehali.dev/projects/457e2a63-a35d-4d95-b05a-c6457cef758e/files/c6241420-9033-430c-89b0-2a36d88e45cb.jpg",
-                "https://cdn.poehali.dev/projects/457e2a63-a35d-4d95-b05a-c6457cef758e/files/2bc1e719-fbb3-4751-ae9e-9c252721b4ac.jpg"
+                "https://cdn.poehali.dev/projects/457e2a63-a35d-4d95-b05a-c6457cef758e/files/fabcbd24-9b7b-453f-8453-d0a102e5877b.jpg",
+                "https://cdn.poehali.dev/projects/457e2a63-a35d-4d95-b05a-c6457cef758e/files/2cea0c3a-78e6-4f0e-8f29-7bbb00d8b79f.jpg",
+                "https://cdn.poehali.dev/projects/457e2a63-a35d-4d95-b05a-c6457cef758e/files/8f999c14-4fc9-4c66-80cf-1d3701458ad9.jpg"
               ];
               return (
                 <Card key={i} className="bg-slate-800/50 border-slate-700/50 p-8 hover-scale backdrop-blur-sm">
@@ -80,7 +96,7 @@ export default function Index() {
                     <img 
                       src={problemCharacters[i]} 
                       alt={item.title}
-                      className="w-16 h-16 object-contain"
+                      className="w-16 h-16 object-contain drop-shadow-lg"
                     />
                   </div>
                   <h3 className="text-2xl font-bold text-white mb-4">{item.title}</h3>
@@ -135,9 +151,9 @@ export default function Index() {
               }
             ].map((pillar, i) => {
               const characterImages = [
-                "https://cdn.poehali.dev/projects/457e2a63-a35d-4d95-b05a-c6457cef758e/files/ca8a6874-6166-4fc3-bbd1-88930eab3953.jpg",
-                "https://cdn.poehali.dev/projects/457e2a63-a35d-4d95-b05a-c6457cef758e/files/f53767b2-5555-49aa-b27e-f21bd574d630.jpg",
-                "https://cdn.poehali.dev/projects/457e2a63-a35d-4d95-b05a-c6457cef758e/files/38db3ac4-4a54-4947-8f02-e58d405ae1a1.jpg"
+                "https://cdn.poehali.dev/projects/457e2a63-a35d-4d95-b05a-c6457cef758e/files/74944681-3e35-4ca7-8371-ae6da1d7a732.jpg",
+                "https://cdn.poehali.dev/projects/457e2a63-a35d-4d95-b05a-c6457cef758e/files/55acfbbe-8cd4-4204-9d3a-e7d3aee5815b.jpg",
+                "https://cdn.poehali.dev/projects/457e2a63-a35d-4d95-b05a-c6457cef758e/files/fd8dc2f1-fc2e-4ba5-9099-f681bc16a559.jpg"
               ];
               return (
                 <Card key={i} className="bg-slate-800/50 border-slate-700/50 p-8 md:p-12 hover-scale backdrop-blur-sm">
@@ -149,7 +165,7 @@ export default function Index() {
                       <img 
                         src={characterImages[i]} 
                         alt={`Этап ${pillar.number}`}
-                        className="w-32 h-32 object-contain"
+                        className="w-32 h-32 object-contain drop-shadow-2xl"
                       />
                     </div>
                     <div className="flex-1 space-y-4">
