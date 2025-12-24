@@ -50,8 +50,16 @@ export default function Index() {
       </section>
 
       {/* Problem Section */}
-      <section className="py-20 px-6 bg-slate-900/50">
-        <div className="max-w-7xl mx-auto">
+      <section className="py-20 px-6 bg-slate-900/50 relative overflow-hidden">
+        {/* Background reputation elements */}
+        <div className="absolute inset-0 opacity-5">
+          <Icon name="BadgeCheck" className="absolute top-10 left-10 text-green-400" size={48} />
+          <Icon name="Star" className="absolute top-20 right-20 text-yellow-400" size={42} />
+          <Icon name="TrendingUp" className="absolute bottom-20 left-1/4 text-green-400" size={50} />
+          <Icon name="MessageSquareText" className="absolute bottom-10 right-1/3 text-blue-400" size={44} />
+          <Icon name="ThumbsUp" className="absolute top-1/2 right-10 text-purple-400" size={46} />
+        </div>
+        <div className="max-w-7xl mx-auto relative z-10">
           <div className="text-center mb-16 animate-fade-in">
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               Плохая репутация — это не просто негативные отзывы
@@ -216,6 +224,13 @@ export default function Index() {
       {/* Pricing Section */}
       <section className="py-20 px-6 relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-b from-transparent via-purple-900/10 to-transparent"></div>
+        {/* Background elements */}
+        <div className="absolute inset-0 opacity-5">
+          <Icon name="Trophy" className="absolute top-10 left-20 text-yellow-400" size={52} />
+          <Icon name="Star" className="absolute top-1/3 right-10 text-yellow-400" size={40} />
+          <Icon name="BadgePercent" className="absolute bottom-20 left-1/3 text-orange-400" size={48} />
+          <Icon name="Sparkles" className="absolute bottom-10 right-20 text-purple-400" size={44} />
+        </div>
         <div className="max-w-7xl mx-auto relative z-10">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
@@ -279,7 +294,14 @@ export default function Index() {
       </section>
 
       {/* Contact Section */}
-      <section className="py-20 px-6 bg-gradient-to-b from-slate-900/50 to-slate-950">
+      <section className="py-20 px-6 bg-gradient-to-b from-slate-900/50 to-slate-950 relative overflow-hidden">
+        {/* Background elements */}
+        <div className="absolute inset-0 opacity-5">
+          <Icon name="Star" className="absolute top-20 left-10 text-yellow-400" size={50} />
+          <Icon name="MessageSquareText" className="absolute bottom-20 right-10 text-blue-400" size={46} />
+          <Icon name="BadgeCheck" className="absolute top-1/2 left-1/4 text-green-400" size={48} />
+          <Icon name="TrendingUp" className="absolute bottom-1/3 right-1/4 text-green-400" size={44} />
+        </div>
         <div className="max-w-5xl mx-auto">
           <Card className="bg-slate-800/50 border-slate-700/50 p-12 backdrop-blur-sm">
             <div className="text-center space-y-8">
@@ -292,40 +314,50 @@ export default function Index() {
               </p>
 
               <div className="grid md:grid-cols-3 gap-6 pt-8">
-                {[
-                  {
-                    icon: "Send",
-                    label: "Стратег в Telegram",
-                    value: "@NovikovReputation",
-                    color: "text-blue-400"
-                  },
-                  {
-                    icon: "MessageCircle",
-                    label: "WhatsApp",
-                    value: "+7 999 569-56-18",
-                    color: "text-green-400"
-                  },
-                  {
-                    icon: "Gift",
-                    label: "Бонус для новых",
-                    value: "@LK_Reputation_bot",
-                    color: "text-purple-400"
-                  }
-                ].map((contact, i) => (
-                  <div key={i} className="text-center space-y-3">
-                    <Icon name={contact.icon} size={32} className={`${contact.color} mx-auto`} />
-                    <div className="text-sm text-slate-400">{contact.label}</div>
-                    <div className="text-lg font-semibold text-white">{contact.value}</div>
-                  </div>
-                ))}
+                <a 
+                  href="https://t.me/NovikovReputation" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="text-center space-y-3 hover:scale-105 transition-transform cursor-pointer group"
+                >
+                  <Icon name="Send" size={32} className="text-blue-400 mx-auto group-hover:text-blue-300" />
+                  <div className="text-sm text-slate-400">Стратег в Telegram</div>
+                  <div className="text-lg font-semibold text-white group-hover:text-blue-300">@NovikovReputation</div>
+                </a>
+                
+                <div className="text-center space-y-3">
+                  <Icon name="Phone" size={32} className="text-green-400 mx-auto" />
+                  <div className="text-sm text-slate-400">Телефон</div>
+                  <a href="tel:+79995695618" className="text-lg font-semibold text-white hover:text-green-300">+7 999 569-56-18</a>
+                </div>
+                
+                <a 
+                  href="https://t.me/LK_Reputation_bot" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="text-center space-y-3 hover:scale-105 transition-transform cursor-pointer group"
+                >
+                  <Icon name="Bot" size={32} className="text-purple-400 mx-auto group-hover:text-purple-300" />
+                  <div className="text-sm text-slate-400">Бот для новых клиентов</div>
+                  <div className="text-lg font-semibold text-white group-hover:text-purple-300">@LK_Reputation_bot</div>
+                </a>
               </div>
 
-              <Button 
-                size="lg" 
-                className="bg-gradient-to-r from-purple-600 to-orange-500 hover:from-purple-700 hover:to-orange-600 text-white px-12 py-6 text-lg mt-8 hover-scale"
-              >
-                Заказать комплексный аудит репутации →
-              </Button>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center items-center pt-8">
+                <Button 
+                  size="lg" 
+                  className="bg-gradient-to-r from-purple-600 to-orange-500 hover:from-purple-700 hover:to-orange-600 text-white px-8 py-6 text-lg hover-scale"
+                >
+                  Получить коммерческое предложение
+                </Button>
+                <Button 
+                  size="lg" 
+                  variant="outline"
+                  className="border-orange-500/50 text-orange-300 hover:bg-orange-500/10 px-8 py-6 text-lg"
+                >
+                  Купить отзывы прямо сейчас
+                </Button>
+              </div>
             </div>
           </Card>
         </div>
