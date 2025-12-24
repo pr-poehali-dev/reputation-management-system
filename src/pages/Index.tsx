@@ -10,7 +10,7 @@ export default function Index() {
         <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
           <div className="flex items-center gap-3">
             <img 
-              src="https://cdn.poehali.dev/projects/457e2a63-a35d-4d95-b05a-c6457cef758e/files/9f331395-ab44-438a-81b6-9cf302ce70e3.jpg"
+              src="https://cdn.poehali.dev/projects/457e2a63-a35d-4d95-b05a-c6457cef758e/files/665bd7db-0136-476e-a228-91a7d6e51976.jpg"
               alt="ГурИнфо"
               className="w-12 h-12 object-contain"
             />
@@ -32,13 +32,6 @@ export default function Index() {
                 на вас 24/7
               </span>
             </h1>
-            <div className="flex justify-center mb-6">
-              <img 
-                src="https://cdn.poehali.dev/projects/457e2a63-a35d-4d95-b05a-c6457cef758e/files/2b6f9b8b-7557-482f-838f-5a0741f2b521.jpg"
-                alt="Профессиональный подход"
-                className="w-40 h-40 object-contain drop-shadow-2xl"
-              />
-            </div>
             <p className="text-xl md:text-2xl text-slate-300 max-w-4xl mx-auto leading-relaxed">
               Комплексное управление репутацией (ORM) от «ГурИнфо»: от массовых отзывов до полного контроля карточек в геосервисах. Повышаем доверие, скрываем негатив, генерируем заявки.
             </p>
@@ -83,22 +76,9 @@ export default function Index() {
                 description: "Нет продающих факторов = нет заявок, даже при трафике",
                 color: "text-yellow-400"
               }
-            ].map((item, i) => {
-              const problemCharacters = [
-                "https://cdn.poehali.dev/projects/457e2a63-a35d-4d95-b05a-c6457cef758e/files/fabcbd24-9b7b-453f-8453-d0a102e5877b.jpg",
-                "https://cdn.poehali.dev/projects/457e2a63-a35d-4d95-b05a-c6457cef758e/files/2cea0c3a-78e6-4f0e-8f29-7bbb00d8b79f.jpg",
-                "https://cdn.poehali.dev/projects/457e2a63-a35d-4d95-b05a-c6457cef758e/files/8f999c14-4fc9-4c66-80cf-1d3701458ad9.jpg"
-              ];
-              return (
+            ].map((item, i) => (
                 <Card key={i} className="bg-slate-800/50 border-slate-700/50 p-8 hover-scale backdrop-blur-sm">
-                  <div className="flex items-start gap-4 mb-6">
-                    <Icon name={item.icon} size={48} className={`${item.color} flex-shrink-0`} />
-                    <img 
-                      src={problemCharacters[i]} 
-                      alt={item.title}
-                      className="w-16 h-16 object-contain drop-shadow-lg"
-                    />
-                  </div>
+                  <Icon name={item.icon} size={48} className={`${item.color} mb-6`} />
                   <h3 className="text-2xl font-bold text-white mb-4">{item.title}</h3>
                   <p className="text-slate-300 text-lg leading-relaxed">{item.description}</p>
                 </Card>
@@ -149,25 +129,12 @@ export default function Index() {
                 accent: "Репутация лидера = максимальные продажи",
                 gradient: "from-purple-500 to-orange-500"
               }
-            ].map((pillar, i) => {
-              const characterImages = [
-                "https://cdn.poehali.dev/projects/457e2a63-a35d-4d95-b05a-c6457cef758e/files/74944681-3e35-4ca7-8371-ae6da1d7a732.jpg",
-                "https://cdn.poehali.dev/projects/457e2a63-a35d-4d95-b05a-c6457cef758e/files/55acfbbe-8cd4-4204-9d3a-e7d3aee5815b.jpg",
-                "https://cdn.poehali.dev/projects/457e2a63-a35d-4d95-b05a-c6457cef758e/files/fd8dc2f1-fc2e-4ba5-9099-f681bc16a559.jpg"
-              ];
-              return (
-                <Card key={i} className="bg-slate-800/50 border-slate-700/50 p-8 md:p-12 hover-scale backdrop-blur-sm">
-                  <div className="flex flex-col md:flex-row gap-8 items-start">
-                    <div className="flex flex-col items-center gap-4">
-                      <div className={`text-8xl font-black bg-gradient-to-br ${pillar.gradient} bg-clip-text text-transparent opacity-20`}>
-                        {pillar.number}
-                      </div>
-                      <img 
-                        src={characterImages[i]} 
-                        alt={`Этап ${pillar.number}`}
-                        className="w-32 h-32 object-contain drop-shadow-2xl"
-                      />
-                    </div>
+            ].map((pillar, i) => (
+              <Card key={i} className="bg-slate-800/50 border-slate-700/50 p-8 md:p-12 hover-scale backdrop-blur-sm">
+                <div className="flex flex-col md:flex-row gap-8 items-start">
+                  <div className={`text-8xl font-black bg-gradient-to-br ${pillar.gradient} bg-clip-text text-transparent opacity-20`}>
+                    {pillar.number}
+                  </div>
                     <div className="flex-1 space-y-4">
                       <div>
                         <div className="text-sm font-semibold text-purple-400 uppercase tracking-wider">{pillar.title}</div>
@@ -181,8 +148,7 @@ export default function Index() {
                     </div>
                   </div>
                 </Card>
-              );
-            })}
+            ))}
           </div>
         </div>
       </section>
