@@ -112,26 +112,40 @@ export default function Index() {
                 accent: "Репутация лидера = максимальные продажи",
                 gradient: "from-purple-500 to-orange-500"
               }
-            ].map((pillar, i) => (
-              <Card key={i} className="bg-slate-800/50 border-slate-700/50 p-8 md:p-12 hover-scale backdrop-blur-sm">
-                <div className="flex flex-col md:flex-row gap-8 items-start">
-                  <div className={`text-8xl font-black bg-gradient-to-br ${pillar.gradient} bg-clip-text text-transparent opacity-20`}>
-                    {pillar.number}
-                  </div>
-                  <div className="flex-1 space-y-4">
-                    <div>
-                      <div className="text-sm font-semibold text-purple-400 uppercase tracking-wider">{pillar.title}</div>
-                      <div className="text-lg text-slate-400">{pillar.subtitle}</div>
+            ].map((pillar, i) => {
+              const characterImages = [
+                "https://cdn.poehali.dev/projects/457e2a63-a35d-4d95-b05a-c6457cef758e/files/eda5dd43-c063-4016-a90c-15a725242699.jpg",
+                "https://cdn.poehali.dev/projects/457e2a63-a35d-4d95-b05a-c6457cef758e/files/8312863f-889f-47ce-9d5d-7b4bcd9ad085.jpg",
+                "https://cdn.poehali.dev/projects/457e2a63-a35d-4d95-b05a-c6457cef758e/files/58978c48-6206-4515-b2f0-0a9153b63538.jpg"
+              ];
+              return (
+                <Card key={i} className="bg-slate-800/50 border-slate-700/50 p-8 md:p-12 hover-scale backdrop-blur-sm">
+                  <div className="flex flex-col md:flex-row gap-8 items-start">
+                    <div className="flex flex-col items-center gap-4">
+                      <div className={`text-8xl font-black bg-gradient-to-br ${pillar.gradient} bg-clip-text text-transparent opacity-20`}>
+                        {pillar.number}
+                      </div>
+                      <img 
+                        src={characterImages[i]} 
+                        alt={`Этап ${pillar.number}`}
+                        className="w-32 h-32 object-contain"
+                      />
                     </div>
-                    <h3 className="text-3xl font-bold text-white leading-tight">{pillar.headline}</h3>
-                    <p className="text-slate-300 text-lg leading-relaxed">{pillar.description}</p>
-                    <div className={`inline-block px-4 py-2 bg-gradient-to-r ${pillar.gradient} rounded-lg`}>
-                      <p className="text-white font-semibold">{pillar.accent}</p>
+                    <div className="flex-1 space-y-4">
+                      <div>
+                        <div className="text-sm font-semibold text-purple-400 uppercase tracking-wider">{pillar.title}</div>
+                        <div className="text-lg text-slate-400">{pillar.subtitle}</div>
+                      </div>
+                      <h3 className="text-3xl font-bold text-white leading-tight">{pillar.headline}</h3>
+                      <p className="text-slate-300 text-lg leading-relaxed">{pillar.description}</p>
+                      <div className={`inline-block px-4 py-2 bg-gradient-to-r ${pillar.gradient} rounded-lg`}>
+                        <p className="text-white font-semibold">{pillar.accent}</p>
+                      </div>
                     </div>
                   </div>
-                </div>
-              </Card>
-            ))}
+                </Card>
+              );
+            })}
           </div>
         </div>
       </section>
