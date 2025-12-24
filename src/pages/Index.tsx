@@ -16,6 +16,13 @@ export default function Index() {
                 на вас 24/7
               </span>
             </h1>
+            <div className="flex justify-center mb-6">
+              <img 
+                src="https://cdn.poehali.dev/projects/457e2a63-a35d-4d95-b05a-c6457cef758e/files/8c6f2de3-5e6c-4390-8c68-ee820067b91a.jpg"
+                alt="Профессиональный подход"
+                className="w-40 h-40 object-contain"
+              />
+            </div>
             <p className="text-xl md:text-2xl text-slate-300 max-w-4xl mx-auto leading-relaxed">
               Комплексное управление репутацией (ORM) от «ГурИнфо»: от массовых отзывов до полного контроля карточек в геосервисах. Повышаем доверие, скрываем негатив, генерируем заявки.
             </p>
@@ -60,13 +67,27 @@ export default function Index() {
                 description: "Нет продающих факторов = нет заявок, даже при трафике",
                 color: "text-yellow-400"
               }
-            ].map((item, i) => (
-              <Card key={i} className="bg-slate-800/50 border-slate-700/50 p-8 hover-scale backdrop-blur-sm">
-                <Icon name={item.icon} size={48} className={`${item.color} mb-6`} />
-                <h3 className="text-2xl font-bold text-white mb-4">{item.title}</h3>
-                <p className="text-slate-300 text-lg leading-relaxed">{item.description}</p>
-              </Card>
-            ))}
+            ].map((item, i) => {
+              const problemCharacters = [
+                "https://cdn.poehali.dev/projects/457e2a63-a35d-4d95-b05a-c6457cef758e/files/aa72c1a8-eafb-4efa-b829-8387cdff5ca3.jpg",
+                "https://cdn.poehali.dev/projects/457e2a63-a35d-4d95-b05a-c6457cef758e/files/c6241420-9033-430c-89b0-2a36d88e45cb.jpg",
+                "https://cdn.poehali.dev/projects/457e2a63-a35d-4d95-b05a-c6457cef758e/files/2bc1e719-fbb3-4751-ae9e-9c252721b4ac.jpg"
+              ];
+              return (
+                <Card key={i} className="bg-slate-800/50 border-slate-700/50 p-8 hover-scale backdrop-blur-sm">
+                  <div className="flex items-start gap-4 mb-6">
+                    <Icon name={item.icon} size={48} className={`${item.color} flex-shrink-0`} />
+                    <img 
+                      src={problemCharacters[i]} 
+                      alt={item.title}
+                      className="w-16 h-16 object-contain"
+                    />
+                  </div>
+                  <h3 className="text-2xl font-bold text-white mb-4">{item.title}</h3>
+                  <p className="text-slate-300 text-lg leading-relaxed">{item.description}</p>
+                </Card>
+              );
+            })}
           </div>
         </div>
       </section>
@@ -114,9 +135,9 @@ export default function Index() {
               }
             ].map((pillar, i) => {
               const characterImages = [
-                "https://cdn.poehali.dev/projects/457e2a63-a35d-4d95-b05a-c6457cef758e/files/eda5dd43-c063-4016-a90c-15a725242699.jpg",
-                "https://cdn.poehali.dev/projects/457e2a63-a35d-4d95-b05a-c6457cef758e/files/8312863f-889f-47ce-9d5d-7b4bcd9ad085.jpg",
-                "https://cdn.poehali.dev/projects/457e2a63-a35d-4d95-b05a-c6457cef758e/files/58978c48-6206-4515-b2f0-0a9153b63538.jpg"
+                "https://cdn.poehali.dev/projects/457e2a63-a35d-4d95-b05a-c6457cef758e/files/ca8a6874-6166-4fc3-bbd1-88930eab3953.jpg",
+                "https://cdn.poehali.dev/projects/457e2a63-a35d-4d95-b05a-c6457cef758e/files/f53767b2-5555-49aa-b27e-f21bd574d630.jpg",
+                "https://cdn.poehali.dev/projects/457e2a63-a35d-4d95-b05a-c6457cef758e/files/38db3ac4-4a54-4947-8f02-e58d405ae1a1.jpg"
               ];
               return (
                 <Card key={i} className="bg-slate-800/50 border-slate-700/50 p-8 md:p-12 hover-scale backdrop-blur-sm">
