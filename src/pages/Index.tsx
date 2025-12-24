@@ -5,17 +5,10 @@ import Icon from "@/components/ui/icon";
 export default function Index() {
   return (
     <div className="min-h-screen bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950">
-      {/* Header with Logo */}
+      {/* Header */}
       <header className="fixed top-0 left-0 right-0 z-50 bg-slate-950/80 backdrop-blur-md border-b border-purple-500/20">
         <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
-          <div className="flex items-center gap-3">
-            <img 
-              src="https://cdn.poehali.dev/projects/457e2a63-a35d-4d95-b05a-c6457cef758e/files/665bd7db-0136-476e-a228-91a7d6e51976.jpg"
-              alt="ГурИнфо"
-              className="w-12 h-12 object-contain"
-            />
-            <span className="text-2xl font-bold text-white">ГурИнфо</span>
-          </div>
+          <span className="text-2xl font-bold text-white">ГурИнфо</span>
           <Button className="bg-gradient-to-r from-purple-600 to-orange-500 hover:from-purple-700 hover:to-orange-600 text-white">
             Связаться
           </Button>
@@ -24,6 +17,15 @@ export default function Index() {
       {/* Hero Section */}
       <section className="relative overflow-hidden pt-32 pb-32 px-6">
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-purple-900/20 via-transparent to-transparent"></div>
+        {/* Background stars */}
+        <div className="absolute inset-0 opacity-10">
+          <Icon name="Star" className="absolute top-20 left-10 text-yellow-400" size={32} />
+          <Icon name="Star" className="absolute top-40 right-20 text-yellow-400" size={24} />
+          <Icon name="Star" className="absolute bottom-32 left-1/4 text-yellow-400" size={28} />
+          <Icon name="Star" className="absolute top-60 right-1/3 text-yellow-400" size={20} />
+          <Icon name="MessageSquareText" className="absolute top-1/3 left-1/3 text-purple-400" size={36} />
+          <Icon name="ThumbsUp" className="absolute bottom-20 right-1/4 text-purple-400" size={32} />
+        </div>
         <div className="max-w-7xl mx-auto relative z-10">
           <div className="text-center space-y-8 animate-fade-in">
             <h1 className="text-5xl md:text-7xl font-bold text-white leading-tight">
@@ -52,9 +54,9 @@ export default function Index() {
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16 animate-fade-in">
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-              Плохая репутация — это не просто негативные отзывы.
+              Плохая репутация — это не просто негативные отзывы
             </h2>
-            <p className="text-2xl text-orange-400 font-semibold">Это упущенные деньги.</p>
+            <p className="text-2xl text-orange-400 font-semibold">Это упущенные деньги</p>
           </div>
           <div className="grid md:grid-cols-3 gap-8">
             {[
@@ -90,11 +92,18 @@ export default function Index() {
       {/* Solution Section - Three Pillars */}
       <section className="py-20 px-6 relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-b from-purple-900/10 to-transparent"></div>
+        {/* Background elements */}
+        <div className="absolute inset-0 opacity-5">
+          <Icon name="Star" className="absolute top-10 right-10 text-yellow-400" size={40} />
+          <Icon name="Star" className="absolute bottom-20 left-20 text-yellow-400" size={36} />
+          <Icon name="TrendingUp" className="absolute top-1/3 right-1/4 text-green-400" size={44} />
+          <Icon name="Shield" className="absolute bottom-1/3 left-1/3 text-purple-400" size={40} />
+        </div>
         <div className="max-w-7xl mx-auto relative z-10">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-              Мы не затыкаем дыры.<br />
-              <span className="text-purple-400">Мы выстраиваем систему.</span>
+              Мы не затыкаем дыры<br />
+              <span className="text-purple-400">Мы выстраиваем систему</span>
             </h2>
             <p className="text-xl text-slate-300">Три кита комплексной репутации</p>
           </div>
