@@ -63,14 +63,7 @@ export default function Index() {
             <p className="text-xl md:text-2xl text-slate-300 max-w-4xl mx-auto leading-relaxed">
               Комплексное управление репутацией (ORM) от «ГурИнфо»: от массовых отзывов до полного контроля карточек в геосервисах. Повышаем доверие, скрываем негатив, генерируем заявки.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center pt-8">
-              <Button size="lg" className="bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white px-8 py-6 text-lg hover-scale">
-                Сделать аудит репутации →
-              </Button>
-              <Button size="lg" variant="outline" className="border-purple-500/50 text-purple-300 hover:bg-purple-500/10 px-8 py-6 text-lg">
-                Получить бонусный пакет
-              </Button>
-            </div>
+
           </div>
         </div>
       </section>
