@@ -318,7 +318,7 @@ export default function Index() {
                 key={i} 
                 className={`relative p-8 backdrop-blur-sm ${
                   plan.popular 
-                    ? 'bg-gradient-to-br from-purple-600/20 to-blue-600/20 border-purple-500 scale-105 shadow-2xl shadow-purple-500/20' 
+                    ? 'bg-gradient-to-br from-purple-900/60 to-blue-900/60 border-purple-500 scale-105 shadow-2xl shadow-purple-500/20' 
                     : 'bg-slate-800/50 border-slate-700/50'
                 } hover-scale overflow-hidden`}
               >
