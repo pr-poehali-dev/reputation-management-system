@@ -318,13 +318,13 @@ export default function Index() {
                 key={i} 
                 className={`relative p-8 backdrop-blur-sm ${
                   plan.popular 
-                    ? 'bg-gradient-to-br from-purple-900/60 to-blue-900/60 border-purple-500 scale-105 shadow-2xl shadow-purple-500/20' 
+                    ? 'bg-gradient-to-br from-white via-yellow-50 to-orange-50 border-4 border-yellow-400 scale-110 shadow-2xl shadow-yellow-500/50' 
                     : 'bg-slate-800/50 border-slate-700/50'
                 } hover-scale overflow-hidden`}
               >
                 {plan.popular && (
-                  <div className="absolute -top-4 left-1/2 -translate-x-1/2 px-5 py-2 bg-gradient-to-r from-purple-800 to-blue-800 rounded-full shadow-xl border-2 border-purple-300">
-                    <span className="text-white text-sm font-bold" style={{textShadow: '0 2px 4px rgba(0,0,0,0.8)'}}>Популярный</span>
+                  <div className="absolute -top-4 left-1/2 -translate-x-1/2 px-5 py-2 bg-gradient-to-r from-yellow-500 to-orange-500 rounded-full shadow-xl border-2 border-yellow-300">
+                    <span className="text-white text-sm font-bold" style={{textShadow: '0 2px 4px rgba(0,0,0,0.8)'}}>⭐ ПОПУЛЯРНЫЙ</span>
                   </div>
                 )}
                 <div className="text-center space-y-6">
@@ -333,8 +333,8 @@ export default function Index() {
                   }`}>{plan.period}</h3>
                   
                   {plan.bonus && (
-                    <div className="bg-gradient-to-r from-yellow-600/20 to-orange-600/20 border border-yellow-500/30 rounded-lg p-3">
-                      <div className="text-yellow-900 font-bold text-sm">🎁 {plan.bonus}</div>
+                    <div className="bg-gradient-to-r from-green-100 to-emerald-100 border-2 border-green-400 rounded-lg p-3 shadow-lg">
+                      <div className="text-green-800 font-bold text-sm">🎁 {plan.bonus}</div>
                     </div>
                   )}
                   
@@ -347,9 +347,13 @@ export default function Index() {
                     <div className={`mt-2 line-through text-lg ${
                       plan.popular ? 'text-slate-700' : 'text-slate-400'
                     }`}>{plan.oldPrice}</div>
-                    <div className="inline-block mt-3 px-4 py-1 bg-gradient-to-r from-green-600/20 to-emerald-600/20 border border-green-500/30 rounded-full">
+                    <div className={`inline-block mt-3 px-4 py-1 rounded-full ${
+                      plan.popular 
+                        ? 'bg-gradient-to-r from-red-500 to-orange-500 border-2 border-red-400 shadow-lg' 
+                        : 'bg-gradient-to-r from-green-600/20 to-emerald-600/20 border border-green-500/30'
+                    }`}>
                       <span className={`font-bold ${
-                        plan.popular ? 'text-green-900' : 'text-green-400'
+                        plan.popular ? 'text-white' : 'text-green-400'
                       }`}>−{plan.discount} скидка</span>
                     </div>
                   </div>
