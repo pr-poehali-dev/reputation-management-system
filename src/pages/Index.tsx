@@ -350,7 +350,7 @@ export default function Index() {
                     {plan.features.map((feature, idx) => (
                       <div key={idx} className="flex items-center justify-start gap-3 px-4">
                         <div className="w-2 h-2 rounded-full bg-gradient-to-r from-purple-400 to-blue-400 flex-shrink-0"></div>
-                        <span className="text-slate-300 text-left">{feature}</span>
+                        <span className="text-slate-900 text-left font-medium">{feature}</span>
                       </div>
                     ))}
                   </div>
