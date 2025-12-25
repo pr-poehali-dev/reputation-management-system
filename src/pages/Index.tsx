@@ -328,21 +328,29 @@ export default function Index() {
                   </div>
                 )}
                 <div className="text-center space-y-6">
-                  <h3 className="text-3xl font-bold text-white">{plan.period}</h3>
+                  <h3 className={`text-3xl font-bold ${
+                    plan.popular ? 'text-slate-900' : 'text-white'
+                  }`}>{plan.period}</h3>
                   
                   {plan.bonus && (
                     <div className="bg-gradient-to-r from-yellow-600/20 to-orange-600/20 border border-yellow-500/30 rounded-lg p-3">
-                      <div className="text-yellow-400 font-bold text-sm">🎁 {plan.bonus}</div>
+                      <div className="text-yellow-900 font-bold text-sm">🎁 {plan.bonus}</div>
                     </div>
                   )}
                   
                   <div className="py-6">
-                    <div className="text-5xl font-black text-white">
+                    <div className={`text-5xl font-black ${
+                      plan.popular ? 'text-slate-900' : 'text-white'
+                    }`}>
                       {plan.price}
                     </div>
-                    <div className="text-slate-400 mt-2 line-through text-lg">{plan.oldPrice}</div>
+                    <div className={`mt-2 line-through text-lg ${
+                      plan.popular ? 'text-slate-700' : 'text-slate-400'
+                    }`}>{plan.oldPrice}</div>
                     <div className="inline-block mt-3 px-4 py-1 bg-gradient-to-r from-green-600/20 to-emerald-600/20 border border-green-500/30 rounded-full">
-                      <span className="text-green-400 font-bold">−{plan.discount} скидка</span>
+                      <span className={`font-bold ${
+                        plan.popular ? 'text-green-900' : 'text-green-400'
+                      }`}>−{plan.discount} скидка</span>
                     </div>
                   </div>
                   
@@ -350,7 +358,9 @@ export default function Index() {
                     {plan.features.map((feature, idx) => (
                       <div key={idx} className="flex items-center justify-start gap-3 px-4">
                         <div className="w-2 h-2 rounded-full bg-gradient-to-r from-purple-400 to-blue-400 flex-shrink-0"></div>
-                        <span className="text-slate-900 text-left font-medium">{feature}</span>
+                        <span className={`text-left font-medium ${
+                          plan.popular ? 'text-slate-900' : 'text-slate-300'
+                        }`}>{feature}</span>
                       </div>
                     ))}
                   </div>
