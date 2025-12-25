@@ -270,29 +270,44 @@ export default function Index() {
               {
                 period: "3 месяца",
                 discount: "10%",
-                popular: false
+                popular: false,
+                features: [
+                  "Массовые отзывы",
+                  "Продающие карточки",
+                  "Лидерство в агрегаторах"
+                ]
               },
               {
                 period: "6 месяцев",
                 discount: "15%",
-                popular: true
+                popular: true,
+                features: [
+                  "Массовые отзывы",
+                  "Продающие карточки",
+                  "Лидерство в агрегаторах"
+                ]
               },
               {
                 period: "12 месяцев",
                 discount: "25%",
-                popular: false
+                popular: false,
+                features: [
+                  "Массовые отзывы",
+                  "Продающие карточки",
+                  "Лидерство в агрегаторах"
+                ]
               }
             ].map((plan, i) => (
               <Card 
                 key={i} 
                 className={`relative p-8 backdrop-blur-sm ${
                   plan.popular 
-                    ? 'bg-gradient-to-br from-purple-600/20 to-blue-600/20 border-purple-500 scale-105' 
+                    ? 'bg-gradient-to-br from-purple-600/20 to-blue-600/20 border-purple-500 scale-105 shadow-2xl shadow-purple-500/20' 
                     : 'bg-slate-800/50 border-slate-700/50'
-                } hover-scale`}
+                } hover-scale overflow-hidden`}
               >
                 {plan.popular && (
-                  <div className="absolute -top-4 left-1/2 -translate-x-1/2 px-4 py-1 bg-gradient-to-r from-purple-600 to-blue-600 rounded-full">
+                  <div className="absolute -top-4 left-1/2 -translate-x-1/2 px-4 py-1 bg-gradient-to-r from-purple-600 to-blue-600 rounded-full shadow-lg">
                     <span className="text-white text-sm font-bold">Популярный</span>
                   </div>
                 )}
@@ -304,14 +319,25 @@ export default function Index() {
                     </div>
                     <div className="text-slate-400 mt-2">скидка</div>
                   </div>
+                  
+                  <div className="space-y-3 py-6">
+                    {plan.features.map((feature, idx) => (
+                      <div key={idx} className="flex items-center justify-start gap-3 px-4">
+                        <div className="w-2 h-2 rounded-full bg-gradient-to-r from-purple-400 to-blue-400 flex-shrink-0"></div>
+                        <span className="text-slate-300 text-left">{feature}</span>
+                      </div>
+                    ))}
+                  </div>
+
                   <Button 
+                    onClick={() => window.open('https://t.me/LK_Reputation_bot', '_blank')}
                     className={`w-full ${
                       plan.popular 
-                        ? 'bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700' 
+                        ? 'bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 shadow-lg shadow-purple-500/30' 
                         : 'bg-slate-700 hover:bg-slate-600'
                     } text-white`}
                     size="lg"
-                  >Получить план</Button>
+                  >Купить отзывы</Button>
                 </div>
               </Card>
             ))}
@@ -369,19 +395,13 @@ export default function Index() {
                 </a>
               </div>
 
-              <div className="flex flex-col sm:flex-row gap-4 justify-center items-center pt-8">
+              <div className="flex justify-center items-center pt-8">
                 <Button 
                   size="lg" 
-                  className="bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white px-8 py-6 text-lg hover-scale"
+                  onClick={() => window.open('https://t.me/NovikovReputation', '_blank')}
+                  className="bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white px-8 py-6 text-lg hover-scale shadow-lg shadow-purple-500/30"
                 >
-                  Получить коммерческое предложение
-                </Button>
-                <Button 
-                  size="lg" 
-                  variant="outline"
-                  className="border-purple-500/50 text-purple-300 hover:bg-purple-500/10 px-8 py-6 text-lg"
-                >
-                  Купить отзывы прямо сейчас
+                  Задать вопросы менеджеру
                 </Button>
               </div>
             </div>
