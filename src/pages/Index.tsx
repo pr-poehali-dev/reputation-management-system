@@ -323,8 +323,8 @@ export default function Index() {
                 } hover-scale overflow-hidden`}
               >
                 {plan.popular && (
-                  <div className="absolute -top-4 left-1/2 -translate-x-1/2 px-4 py-1 bg-gradient-to-r from-purple-600 to-blue-600 rounded-full shadow-lg">
-                    <span className="text-white text-sm font-bold">Популярный</span>
+                  <div className="absolute -top-4 left-1/2 -translate-x-1/2 px-4 py-2 bg-gradient-to-r from-purple-700 to-blue-700 rounded-full shadow-lg border border-purple-400/50">
+                    <span className="text-white text-sm font-bold drop-shadow-lg">Популярный</span>
                   </div>
                 )}
                 <div className="text-center space-y-6">
