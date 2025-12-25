@@ -35,7 +35,10 @@ export default function Index() {
             </button>
           </nav>
 
-          <Button className="bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white font-semibold">
+          <Button 
+            onClick={() => window.open('https://t.me/GyrInfo', '_blank')}
+            className="bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white font-semibold"
+          >
             Связаться
           </Button>
         </div>
