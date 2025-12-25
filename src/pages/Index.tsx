@@ -263,31 +263,46 @@ export default function Index() {
               {
                 period: "3 месяца",
                 discount: "10%",
+                price: "45 000 ₽",
+                oldPrice: "50 000 ₽",
                 popular: false,
                 features: [
                   "Массовые отзывы",
                   "Продающие карточки",
-                  "Лидерство в агрегаторах"
+                  "Лидерство в агрегаторах",
+                  "Настройка и оптимизация карточек",
+                  "Мониторинг репутации 24/7"
                 ]
               },
               {
                 period: "6 месяцев",
                 discount: "15%",
+                price: "85 000 ₽",
+                oldPrice: "100 000 ₽",
                 popular: true,
                 features: [
                   "Массовые отзывы",
                   "Продающие карточки",
-                  "Лидерство в агрегаторах"
+                  "Лидерство в агрегаторах",
+                  "Настройка и оптимизация карточек",
+                  "Мониторинг репутации 24/7",
+                  "Работа с негативом"
                 ]
               },
               {
                 period: "12 месяцев",
                 discount: "25%",
+                price: "150 000 ₽",
+                oldPrice: "200 000 ₽",
                 popular: false,
                 features: [
                   "Массовые отзывы",
                   "Продающие карточки",
-                  "Лидерство в агрегаторах"
+                  "Лидерство в агрегаторах",
+                  "Настройка и оптимизация карточек",
+                  "Мониторинг репутации 24/7",
+                  "Работа с негативом",
+                  "Персональный менеджер"
                 ]
               }
             ].map((plan, i) => (
@@ -306,11 +321,14 @@ export default function Index() {
                 )}
                 <div className="text-center space-y-6">
                   <h3 className="text-3xl font-bold text-white">{plan.period}</h3>
-                  <div className="py-8">
-                    <div className="text-6xl font-black bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
-                      {plan.discount}
+                  <div className="py-6">
+                    <div className="text-5xl font-black text-white">
+                      {plan.price}
                     </div>
-                    <div className="text-slate-400 mt-2">скидка</div>
+                    <div className="text-slate-400 mt-2 line-through text-lg">{plan.oldPrice}</div>
+                    <div className="inline-block mt-3 px-4 py-1 bg-gradient-to-r from-green-600/20 to-emerald-600/20 border border-green-500/30 rounded-full">
+                      <span className="text-green-400 font-bold">−{plan.discount} скидка</span>
+                    </div>
                   </div>
                   
                   <div className="space-y-3 py-6">
@@ -388,13 +406,21 @@ export default function Index() {
                 </a>
               </div>
 
-              <div className="flex justify-center items-center pt-8">
+              <div className="flex flex-col sm:flex-row gap-4 justify-center items-center pt-8">
                 <Button 
                   size="lg" 
-                  onClick={() => window.open('https://t.me/NovikovReputation', '_blank')}
+                  onClick={() => window.open('https://t.me/GyrInfo', '_blank')}
                   className="bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white px-8 py-6 text-lg hover-scale shadow-lg shadow-purple-500/30"
                 >
-                  Задать вопросы менеджеру
+                  Связаться
+                </Button>
+                <Button 
+                  size="lg" 
+                  variant="outline"
+                  onClick={() => window.open('https://t.me/LK_Reputation_bot', '_blank')}
+                  className="border-purple-500/50 text-purple-300 hover:bg-purple-500/10 px-8 py-6 text-lg hover-scale"
+                >
+                  Получить бонусы
                 </Button>
               </div>
             </div>
