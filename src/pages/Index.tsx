@@ -440,7 +440,7 @@ export default function Index() {
               <div className="flex flex-col sm:flex-row gap-4 justify-center items-center pt-8">
                 <Button 
                   size="lg" 
-                  onClick={() => window.open('https://t.me/GyrInfo', '_blank')}
+                  onClick={() => window.open('https://t.me/NovikovReputation', '_blank')}
                   className="bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white px-8 py-6 text-lg hover-scale shadow-lg shadow-purple-500/30"
                 >
                   Связаться
